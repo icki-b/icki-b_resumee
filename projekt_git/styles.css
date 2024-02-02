@@ -1,0 +1,223 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Stylizacja kontenera */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Stylizacja nagłówka */
+header {
+  background-color: #2b2b2b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Stylizacja menu nawigacyjnego */
+nav {
+  margin: 20px auto;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #444;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+/* Stylizacja sekcji */
+section {
+  background-color: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Stylizacja galerii i slidera */
+.carousel-container {
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  will-change: transform;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.prev, button.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ddd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: #ccc;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+/* Stylizacja stopki */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* Stylizacja formularza kontaktowego */
+.form-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  flex-basis: 48%;
+  margin-bottom: 20px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #333;
+}
+
+/* Ustawienie etykiet w prawidłowej pozycji */
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.form-field-textarea {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.form-field-textarea textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Stylizacja przycisku "Wyślij" */
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #444;
+}

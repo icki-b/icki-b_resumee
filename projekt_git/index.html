@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoja Strona</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Bartłomiej Nowicki</h1>
+        <nav>
+            <ul>
+                <li><a href="#strona-glowna">Strona Główna</a></li>
+                <li><a href="#o-mnie">O mnie</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="strona-glowna">
+      <h2>Witaj na mojej stronie CV!</h2>
+      <p>Witaj! Jestem Bartłomiej Nowicki, a ta strona zawiera moje profesjonalne CV oraz więcej informacji o mnie. Zapraszam Cię do zapoznania się z moim doświadczeniem, umiejętnościami i osiągnięciami.</p>
+    </section>
+
+    <section id="o-mnie">
+      <h2>O mnie</h2>
+      <p>
+          Jestem energicznym i ambitnym absolwentem Zespołu Szkół Nr 3 im. Władysława Stanisława Reymonta w Łukowie na kierunku Informatyka, gdzie moja pasja do technologii i innowacji została w pełni rozwinięta. Od wczesnych lat nastoletnich angażuję się aktywnie w działania społeczne i sportowe, co pozwoliło mi zdobyć umiejętności pracy z ludźmi oraz nauczyć się cennej lekcji pracy zespołowej i determinacji. Jako wykwalifikowany instruktor kitesurfingu od 15. roku życia, posiadam nie tylko umiejętności techniczne, ale także zdolności interpersonalne, które pozwalają mi efektywnie przekazywać wiedzę i pasję innym.
+      </p>
+      <h3>Edukacja:</h3>
+      <ul>
+          <li>Informatyka, Zespół Szkół Nr 3 im. Władysława Stanisława Reymonta w Łukowie</li>
+          <li>Informatyka, specjalizacja Front-end Developer (3 rok), WSB Merito, Warszawa</li>
+      </ul>
+      <h3>Certyfikaty:</h3>
+      <ul>
+          <li>First Certificate in English (FCE)</li>
+          <li>EE.08 Montaż i eksploatacja systemów komputerowych, urządzeń peryferyjnych i sieci</li>
+          <li>EE.09 Programowanie, tworzenie i administrowanie stronami internetowymi i bazami danych</li>
+      </ul>
+      <h3>Doświadczenie:</h3>
+      <ul>
+          <li>Helpdesk IT, od 15 listopada 2021:
+              <p>Od listopada 2021 roku pełnię rolę wsparcia IT, zapewniając pomoc techniczną i rozwiązując problemy związane z oprogramowaniem oraz sprzętem komputerowym. Moja rola wymaga szybkiego identyfikowania i diagnozowania problemów IT, a także skutecznej komunikacji z użytkownikami w celu zapewnienia wydajnego rozwiązywania problemów.</p>
+          </li>
+          <li>Instruktor Kitesurfingu:
+              <p>Od 15 roku życia prowadzę kursy i szkolenia z kitesurfingu, co pozwoliło mi nie tylko rozwijać moją pasję do sportów wodnych, ale także zdobyć cenne doświadczenie w nauczaniu i zarządzaniu grupami. Moje umiejętności organizacyjne i zdolność adaptacji do różnych warunków i potrzeb uczestników kursów są dowodem mojej elastyczności i zaangażowania.</p>
+          </li>
+      </ul>
+      <h3>Umiejętności i zainteresowania:</h3>
+      <ul>
+          <li>Sport: Piłka nożna, kitesurfing, snowboard, narciarstwo, koszykówka. Moja pasja do sportu jest nie tylko formą aktywności fizycznej, ale także sposobem na rozwijanie dyscypliny, wytrwałości i pracy zespołowej.</li>
+          <li>Gry komputerowe: Jako zapalony gracz, spędzam część wolnego czasu na graniu w najnowsze tytuły, takie jak The Finals oraz Ea Sports FC 24. Gry te nie tylko dostarczają rozrywki, ale także pomagają w rozwijaniu strategicznego myślenia i szybkości reakcji.</li>
+          <li>Technologie webowe: Jako student informatyki ze specjalizacją Front-end Developer, jestem na bieżąco z najnowszymi trendami w projektowaniu stron internetowych i aplikacji webowych. Moje zainteresowania koncentrują się na tworzeniu użytecznych i estetycznie przyjemnych interfejsów użytkownika.</li>
+      </ul>
+      <h3>Kontakt:</h3>
+      <p>
+          Zachęcam do kontaktu za pośrednictwem formularza kontaktowego na dole strony lub bezpośrednio przez e-mail. Jestem otwarty na nowe wyzwania i możliwości współpracy w projektach związanych z technologiami webowymi, a także wszelkie inicjatywy, gdzie mogę wykorzystać moje umiejętności instruktorskie i pasję do sportu.
+      </p>
+  </section>
+
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Obraz_1.jpg" alt="Obraz 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Obraz_2.jpg" alt="Obraz 2">
+                    </div>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <div class="form-container">
+          <form action="send_email.php" method="post">
+              <div class="form-row">
+                  <div class="form-field">
+                    <label for="imie">Imię</label>
+                    <input type="text" id="imie" name="imie" required maxlength="20">
+                  </div>
+  
+                  <div class="form-field">
+                    <label for="nazwisko">Nazwisko</label>
+                    <input type="text" id="nazwisko" name="nazwisko" required maxlength="25">
+                  </div>
+              </div>
+  
+              <div class="form-row">
+                  <div class="form-field">
+                    <label for="email">Adres Email</label>
+                    <input type="email" id="email" name="email" required maxlength="40">
+                  </div>
+  
+                  <div class="form-field">
+                    <label for="numer_telefonu">Numer Telefonu</label>
+                    <input type="tel" id="numer_telefonu" name="numer_telefonu" maxlength="11">
+                  </div>
+              </div>
+  
+              <div class="form-field form-field-textarea">
+                <label for="message">Treść Wiadomości (max 100 znaków)</label>
+                <textarea name="message" placeholder=" " required></textarea>
+              </div>
+  
+              <div class="form-button">
+                  <input type="submit" value="Wyślij">
+              </div>
+          </form>
+      </div>
+  </section>   
+
+    <footer>
+        <div class="contact">
+            <h2>Dane kontaktowe</h2>
+            <p>+48 111 222 333</p>
+            <p>bartlomiej.nowicki23@gmail.com</p>
+        </div>
+        <div class="privacy-policy">
+            <h2>Polityka Prywatności</h2>
+            <p>treść polityki prywatności</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
