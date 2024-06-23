@@ -4,9 +4,9 @@ Witaj na repozytorium strony CV Bartłomieja Nowickiego. Strona ta została stwo
 
 ## Funkcje
 
-- **Strona Główna**: Krótkie wprowadzenie i powitanie od Bartka.
+- **Strona Główna**: Krótkie wprowadzenie i powitanie.
 - **O mnie**: Sekcja z biografią, edukacją i certyfikatami.
-- **Galeria**: Interaktywna karuzela z obrazami ilustrującymi różne aspekty życia i pracy Bartłomieja.
+- **Galeria**: Interaktywna karuzela z obrazami ilustrującymi różne aspekty mojego życia i pracy.
 - **Kontakt**: Formularz kontaktowy do bezpośredniej komunikacji.
 
 ## Technologie
