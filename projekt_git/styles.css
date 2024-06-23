@@ -2,12 +2,70 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+  background: #2c3e50;
+  color: #fff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before, body::after {
+  content: '';
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 15s infinite;
+}
+
+body::before {
+  top: 20%;
+  left: 10%;
+  animation-duration: 18s;
+}
+
+body::after {
+  top: 60%;
+  left: 80%;
+  animation-duration: 22s;
+}
+
+/* Dodatkowe koła */
+body::before, body::after, body::before:nth-of-type(2), body::after:nth-of-type(2), body::before:nth-of-type(3), body::after:nth-of-type(3), body::before:nth-of-type(4), body::after:nth-of-type(4), body::before:nth-of-type(5), body::after:nth-of-type(5) {
+  content: '';
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 15s infinite;
+}
+
+body::before:nth-of-type(2) { top: 30%; left: 30%; animation-duration: 20s; }
+body::after:nth-of-type(2) { top: 70%; left: 60%; animation-duration: 24s; }
+body::before:nth-of-type(3) { top: 10%; left: 50%; animation-duration: 26s; }
+body::after:nth-of-type(3) { top: 50%; left: 20%; animation-duration: 28s; }
+body::before:nth-of-type(4) { top: 40%; left: 70%; animation-duration: 22s; }
+body::after:nth-of-type(4) { top: 80%; left: 40%; animation-duration: 18s; }
+body::before:nth-of-type(5) { top: 15%; left: 80%; animation-duration: 30s; }
+body::after:nth-of-type(5) { top: 65%; left: 15%; animation-duration: 20s; }
+
+@keyframes float {
+  0% {
+    transform: scale(0) translate(0, 0);
+  }
+  50% {
+    transform: scale(1) translate(50px, 50px);
+  }
+  100% {
+    transform: scale(0) translate(0, 0);
+  }
 }
 
 .container {
@@ -17,16 +75,25 @@ body, html {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 header {
-  background-color: #2b2b2b;
+  background: #1f2a38;
   color: white;
   padding: 20px 0;
+  border-radius: 8px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Zegarek */
@@ -43,6 +110,8 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
 }
 
 /* MENU */
@@ -87,7 +156,7 @@ nav a:hover {
   color: white;
 }
 
-/* Fade in i hover sekcji*/
+/* Sekcje */
 section {
   background-color: white;
   margin: 20px 0;
@@ -95,8 +164,10 @@ section {
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
   flex: 1;
-  opacity: 0;
-  transform: translateY(20px);
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  color: #333;
 }
 
 section.visible {
@@ -159,6 +230,7 @@ button.prev, button.next {
   padding: 10px 20px;
   border-radius: 50%;
   transition: background-color 0.2s ease;
+  z-index: 1;
 }
 
 button.prev:hover, button.next:hover {
@@ -169,12 +241,22 @@ button.prev { left: 10px; }
 button.next { right: 10px; }
 
 footer {
-  background-color: #333;
+  background: #1f2a38;
   color: white;
   text-align: center;
+  border-radius: 8px;
   padding: 20px 0;
   margin-top: 20px;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Formularz */
@@ -186,6 +268,8 @@ footer {
   text-align: center;
   margin: 40px auto;
   max-width: 800px;
+  position: relative;
+  z-index: 1;
 }
 
 .form-row {
@@ -256,15 +340,15 @@ input[type="submit"]:hover {
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
   background-color: #333;
   color: white;
   border: none;
   border-radius: 50%;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -274,6 +358,29 @@ input[type="submit"]:hover {
 .scroll-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* Chmurka */
+.scroll-to-top .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+}
+
+.scroll-to-top:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Responsywność */

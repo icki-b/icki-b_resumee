@@ -53,8 +53,6 @@
                 <li>Gry komputerowe: Jako zapalony gracz, spędzam część wolnego czasu na graniu w najnowsze tytuły, takie jak The Finals oraz Ea Sports FC 24. Gry te nie tylko dostarczają rozrywki, ale także pomagają w rozwijaniu strategicznego myślenia i szybkości reakcji.</li>
                 <li>Technologie webowe: Jako student informatyki ze specjalizacją Front-end Developer, jestem na bieżąco z najnowszymi trendami w projektowaniu stron internetowych i aplikacji webowych. Moje zainteresowania koncentrują się na tworzeniu użytecznych i estetycznie przyjemnych interfejsów użytkownika.</li>
             </ul>
-            <h3>Kontakt:</h3>
-            <p>Zachęcam do kontaktu za pośrednictwem formularza kontaktowego na dole strony...</p>
         </section>
         <section id="galeria">
             <h2>Galeria</h2>
@@ -99,7 +97,7 @@
                     </div>
                     <div class="form-field form-field-textarea">
                         <label for="message">Treść Wiadomości (max 100 znaków)</label>
-                        <textarea name="message" placeholder=" " required maxlength="100"></textarea>
+                        <textarea id="message" name="message" placeholder=" " required maxlength="100"></textarea>
                     </div>
                     <div class="form-button">
                         <input type="submit" value="Wyślij">
@@ -119,7 +117,9 @@
             </div>
         </footer>
     </div>
-    <button id="scrollToTop" class="scroll-to-top">▲</button>
+    <button id="scrollToTop" class="scroll-to-top">⬆
+        <span class="tooltip">Przewiń do góry!</span>
+    </button>
     <script src="scripts.js"></script>
 </body>
 </html>
